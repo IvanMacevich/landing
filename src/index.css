@@ -23,8 +23,8 @@ code {
 .pagination a {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #7BE7D2;
-  color: #7BE7D2;
+  border: 1px solid #517F83;
+  color: #517F83;
 }
 
 .pagination__link {
@@ -33,7 +33,7 @@ code {
 
 .pagination__link--active a {
   color: #fff;
-  background: #7BE7D2;
+  background: #517F83;
 }
 
 .pagination__link--disabled a {
