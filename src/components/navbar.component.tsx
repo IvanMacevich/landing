@@ -33,14 +33,14 @@ const pagesMobile = [
 ];
 
 const pages = [
-	{ id: 1, title: "Home", page: "" },
+	{ id: 1, title: "Home", page: "home" },
 	{
 		id: 2,
 		title: "Log Cabins",
 		page: "log-cabins",
 		subpages: [
 			{ id: 6, title: "Garden log cabins 44mm", page: "garden-log-cabins" },
-			{ id: 7, title: "Garden log cabins 34mm", page: "log-cabins-four-four" },
+			{ id: 7, title: "Garden log cabins 34mm", page: "log-cabins-three-four" },
 			{ id: 8, title: "Residential Log Cabins", page: "residential-log-cabins" }
 		]
 	},
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
 				position="static"
 				sx={{ backgroundColor: "#517F83" }}>
 				<Toolbar>
-					<Link href="/">
+					<Link href="home">
 						<Box
 							component="img"
 							sx={{
@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
 														// You can add logic to navigate to the subpage here
 													}}>
 													<Link
-														href={`/${subpage.page}`}
+														href={`${subpage.page}`}
 														underline="none">
 														<Button sx={{ color: "black" }}>
 															{subpage.title}
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
 									</React.Fragment>
 								) : (
 									<Link
-										href={`/${page.page}`}
+										href={`${page.page}`}
 										underline="none">
 										<Button sx={{ my: 2, display: "block" }}>
 											{page.title}

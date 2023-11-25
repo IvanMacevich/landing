@@ -19,8 +19,7 @@ const App: React.FC = () => {
 			<Routes>
 				<Route
 					path="/home"
-					element={<Main />}
-				/>
+					element={<Main />}></Route>
 				<Route
 					path="/garden-log-cabins"
 					element={<LogCabins />}></Route>
