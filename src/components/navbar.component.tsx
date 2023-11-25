@@ -20,8 +20,13 @@ import {
 } from "@mui/material";
 
 const pagesMobile = [
-	{ id: 1, title: "Home", page: "" },
-	{ id: 6, title: "Garden Log Cabins", page: "garden-log-cabins" },
+	{ id: 1, title: "Home", page: "home" },
+	{ id: 6, title: "Garden Log Cabins 44", page: "garden-log-cabins" },
+	{
+		id: 8,
+		title: "Garden Log Cabins 34",
+		page: "log-cabins-three-four"
+	},
 	{ id: 7, title: "Residential Log Cabins", page: "residential-log-cabins" },
 	{ id: 3, title: "Timber Frame Houses", page: "timber" },
 	{ id: 5, title: "Contact Us", page: "contact-us" }

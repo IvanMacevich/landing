@@ -4,7 +4,8 @@ export const data = [
 		name: "Timber Frame",
 		folder: "Timber",
 		info: "",
-		img: "Dolores 102m2/1.jpg"
+		img: "Dolores 102m2/1.jpg",
+		link:'/timber'
 	},
 	{
 		id: 2,
@@ -12,13 +13,15 @@ export const data = [
 		folder: "Log Cabins",
 		info: "",
 		img: "Victoria1.png",
-		buttons: 2
+		buttons: 2,
+		link:''
 	},
 	{
 		id: 2,
-		name: "Residential Log Cabins",
-		folder: "Log Cabins",
+		name: "Duo Wall Log Houses",
+		folder: "Timber",
 		info: "",
-		img: "Victoria1.png"
+		img: "Alice 60m2/1.jpg",
+		link:'/duo-wall'
 	}
 ];

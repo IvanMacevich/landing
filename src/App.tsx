@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Route, Router, Routes } from "react-router-dom";
+import { Navigate, Route, Router, Routes } from "react-router-dom";
 import Main from "./pages/Main";
 import LogCabins from "pages/log-cabins.page";
 import ContactUs from "pages/contact-us.page";
@@ -18,8 +18,9 @@ const App: React.FC = () => {
 		<div className="App">
 			<Routes>
 				<Route
-					path="/"
-					element={<Main />}></Route>
+					path="/home"
+					element={<Main />}
+				/>
 				<Route
 					path="/garden-log-cabins"
 					element={<LogCabins />}></Route>
@@ -27,10 +28,10 @@ const App: React.FC = () => {
 					path="/residential-log-cabins"
 					element={<LogResidential />}></Route>
 				<Route
-					path="/log-cabins-four-four"
+					path="/log-cabins-three-four"
 					element={<LogCabinsFourFour />}></Route>
 				<Route
-					path="/log-cabins-four-four/:id"
+					path="/log-cabins-three-four/:id"
 					element={<LogCabinFourFourDetail />}></Route>
 				<Route
 					path="/timber"
@@ -47,6 +48,10 @@ const App: React.FC = () => {
 				<Route
 					path="/contact-us"
 					element={<ContactUs />}></Route>
+				<Route
+					path="/*"
+					element={<Navigate to="/home" />}
+				/>
 			</Routes>
 		</div>
 	);

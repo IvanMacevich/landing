@@ -21,7 +21,15 @@ const TimberDetail = () => {
 	if (!cabin) {
 		return <div>Cabin not found</div>;
 	}
-
+	const onButtonClick = () => {
+		const pdfUrl = require("../assets/Catalogue 34mm PDF.pdf");
+		const link = document.createElement("a");
+		link.href = pdfUrl;
+		link.download = "Catalogue 34mm PDF.pdf"; // specify the filename
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
 	const handleThumbnailClick = (index: any) => {
 		clickedInd = index;
 		setMainPhotoIndex(index);
@@ -43,6 +51,23 @@ const TimberDetail = () => {
 	return (
 		<Box>
 			<Navbar />
+			<Box
+				sx={{
+					maxWidth: "1200px",
+					margin: "10px auto 0px auto",
+					textAlign: "right"
+				}}>
+				<Button
+					onClick={onButtonClick}
+					sx={{
+						backgroundColor: "#517F83",
+						"&:hover": {
+							backgroundColor: "#171219"
+						}
+					}}>
+					Download Catalogue
+				</Button>
+			</Box>
 			<Typography
 				variant="h5"
 				sx={{
@@ -81,7 +106,9 @@ const TimberDetail = () => {
 									height: { md: "500px", xs: "auto" },
 									cursor: "pointer"
 								}}
-								src={require(`../assets/Log Cabins 44/${cabinName}/${index + 1}.jpg`)}
+								src={require(`../assets/Log Cabins 44/${cabinName}/${
+									index + 1
+								}.jpg`)}
 								alt={`${cabin.name}${index + 1}`}
 								onClick={() => handleThumbnailClick(index)}
 							/>
@@ -98,7 +125,7 @@ const TimberDetail = () => {
 				/>
 			</Box>
 
-			<Typography sx={{maxWidth:'1200px', margin: '0 auto'}}>
+			<Typography sx={{ maxWidth: "1200px", margin: "0 auto", marginBottom:'90px'}}>
 				{cabin.descripton}
 			</Typography>
 

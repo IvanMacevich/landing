@@ -274,6 +274,7 @@ const Main: React.FC = () => {
 						name={i.name}
 						info={i.info}
 						key={i.id}
+						link={i.link}
 					/>
 				))}
 			</Container>

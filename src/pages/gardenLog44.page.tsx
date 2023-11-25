@@ -40,10 +40,10 @@ const LogCabinsFourFour = () => {
 		margin: "10px auto"
 	};
 	const onButtonClick = () => {
-		const pdfUrl = require('../assets/Catalogue 34mm PDF.pdf');
+		const pdfUrl = require("../assets/Catalogue 34mm PDF.pdf");
 		const link = document.createElement("a");
 		link.href = pdfUrl;
-		link.download = 'Catalogue 34mm PDF.pdf'; // specify the filename
+		link.download = "Catalogue 34mm PDF.pdf"; // specify the filename
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
@@ -58,9 +58,12 @@ const LogCabinsFourFour = () => {
 					textAlign: "right"
 				}}>
 				<Button
-				onClick={onButtonClick}
+					onClick={onButtonClick}
 					sx={{
-						backgroundColor: "#517F83"
+						backgroundColor: "#517F83",
+						"&:hover": {
+							backgroundColor: "#171219"
+						}
 					}}>
 					Download Catalogue
 				</Button>
@@ -78,7 +81,7 @@ const LogCabinsFourFour = () => {
 				{cabinsToShow.map((cabin) => (
 					<Link
 						key={cabin.id}
-						href={`/log-cabins-four-four/${cabin.id}`}
+						href={`/log-cabins-three-four/${cabin.id}`}
 						sx={cabinStyle}>
 						<Card>
 							<CardMedia
