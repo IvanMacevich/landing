@@ -11,13 +11,13 @@ import {
 	Box,
 	Divider,
 	Drawer,
-	Link,
 	List,
 	ListItem,
 	ListItemText,
 	Menu,
 	MenuItem
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const pagesMobile = [
 	{ id: 1, title: "Home", page: "home" },
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
 				position="static"
 				sx={{ backgroundColor: "#517F83" }}>
 				<Toolbar>
-					<Link href="home">
+					<Link to="/home">
 						<Box
 							component="img"
 							sx={{
@@ -118,9 +118,7 @@ const Navbar: React.FC = () => {
 														handleLogCabinMenuClose();
 														// You can add logic to navigate to the subpage here
 													}}>
-													<Link
-														href={`${subpage.page}`}
-														underline="none">
+													<Link to={`/${subpage.page}`}>
 														<Button sx={{ color: "black" }}>
 															{subpage.title}
 														</Button>
@@ -130,9 +128,7 @@ const Navbar: React.FC = () => {
 										</Menu>
 									</React.Fragment>
 								) : (
-									<Link
-										href={`${page.page}`}
-										underline="none">
+									<Link to={`/${page.page}`}>
 										<Button sx={{ my: 2, display: "block" }}>
 											{page.title}
 										</Button>
@@ -158,9 +154,7 @@ const Navbar: React.FC = () => {
 							<ListItem
 								button
 								key={page.id}>
-								<Link
-									href={`/${page.page}`}
-									underline="none">
+								<Link to={`/${page.page}`}>
 									<Button sx={{ my: 2, color: "black", display: "block" }}>
 										{page.title}
 									</Button>

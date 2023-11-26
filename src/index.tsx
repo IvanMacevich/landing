@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {CssBaseline, ThemeProvider} from '@mui/material';
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
 import { theme } from './utils/theme/theme';
 
 const root = ReactDOM.createRoot(
@@ -12,10 +12,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-        <Router basename='landing'>
+        <BrowserRouter>
             <CssBaseline/>
             <App />
-        </Router>
+        </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
 );

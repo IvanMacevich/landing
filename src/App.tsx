@@ -18,7 +18,7 @@ const App: React.FC = () => {
 		<div className="App">
 			<Routes>
 				<Route
-					path="/home"
+					index path="/home"
 					element={<Main />}></Route>
 				<Route
 					path="/garden-log-cabins"
@@ -48,7 +48,7 @@ const App: React.FC = () => {
 					path="/contact-us"
 					element={<ContactUs />}></Route>
 				<Route
-					path="/*"
+					path="*"
 					element={<Navigate to="/home" />}
 				/>
 			</Routes>

@@ -5,9 +5,9 @@ import {
 	Card,
 	CardContent,
 	CardMedia,
-	Link,
 	Typography
 } from "@mui/material";
+import {Link} from 'react-router-dom'
 import Navbar from "components/navbar.component";
 import ReactPaginate from "react-paginate";
 import { logCabinsDate } from "helpers/log-cabins.data";
@@ -81,8 +81,8 @@ const LogCabinsFourFour = () => {
 				{cabinsToShow.map((cabin) => (
 					<Link
 						key={cabin.id}
-						href={`/log-cabins-three-four/${cabin.id}`}
-						sx={cabinStyle}>
+						to={`/log-cabins-three-four/${cabin.id}`}
+						style={cabinStyle}>
 						<Card>
 							<CardMedia
 								component="img"
