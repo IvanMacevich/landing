@@ -236,7 +236,9 @@ const TimberDetail = () => {
 						<Box>
 							<Box
 								component="img"
-								src={require(`../assets/Timber/${cabin.name}/${cabin.amount_of_images+2}.jpg`)}
+								src={require(`../assets/Timber/${cabin.name}/${
+									cabin.amount_of_images + 2
+								}.jpg`)}
 								alt={cabin.name}
 								width="100%"
 								height="auto"
@@ -269,7 +271,7 @@ const TimberDetail = () => {
 							listStyleType: "none",
 							textAlign: "left",
 							display: "grid",
-							padding: {xs:"0px"},
+							padding: { xs: "0px" },
 							gridTemplateColumns: { md: "1fr 1fr 1fr 1fr", sm: "1f" },
 							gap: "10px"
 						}}>
@@ -466,17 +468,7 @@ const TimberDetail = () => {
 								padding: "10px",
 								margin: "10px"
 							}}>
-							Foundation binding – triple board 50х150mm.
-							<br />
-							External walls and gables: board 50x150 mm.
-							<br /> Floor joists: 50x150 mm.
-							<br />
-							Attic floors: board 50x150 mm.
-							<br /> Braces: board 25x100 mm.
-							<br /> Interior partitions for load-bearing walls made of boards
-							50x150 mm. Interior partitions made of boards 50x100 mm.
-							<br /> External frame cladding: OSB 9 mm.
-							<br />
+							Basic kit and rough floors: OSB 18 mm.
 						</p>
 						<h4>Roof structure:</h4>
 						<p
@@ -487,13 +479,7 @@ const TimberDetail = () => {
 								padding: "10px",
 								margin: "10px"
 							}}>
-							Rafters: board 50x150 mm, collar ties 50x150 mm.
-							<br /> Waterproof membrane STROTEX 1300 Basic.
-							<br /> Counter-crate 25x50 mm. Crate 25х100 mm.
-							<br /> Roofing components: eaves strip, wind strip. Cladding on
-							the roof crate: OSB 9 mm.
-							<br /> Roof covering: two-layer shingle tiles.
-							<br />
+							Basic kit
 						</p>
 						<h4>Insulation and steam-waterproofing:</h4>
 						<p
@@ -504,6 +490,11 @@ const TimberDetail = () => {
 								padding: "10px",
 								margin: "10px"
 							}}>
+							Floor insulation 150 mm.<br/> Insulation of external walls 150 mm.<br/>
+							Soundproofing of interior partitions 100 mm.<br/> Roof insulation 150
+							mm, pitched roof.<br/> Vapor barrier film for external walls.<br/>
+							Waterproof and windproof film for interior partitions.<br/> Vapor
+							barrier film for the attic floor.<br/> Vapor barrier film for rafters.<br/>
 							Waterproof and windproof membrane on the façade.
 						</p>
 						<h4>Biochemical protection:</h4>
@@ -539,17 +530,7 @@ const TimberDetail = () => {
 								padding: "10px",
 								margin: "10px"
 							}}>
-							Foundation binding – triple board 50х150mm.
-							<br />
-							External walls and gables: board 50x150 mm.
-							<br /> Floor joists: 50x150 mm.
-							<br />
-							Attic floors: board 50x150 mm.
-							<br /> Braces: board 25x100 mm.
-							<br /> Interior partitions for load-bearing walls made of boards
-							50x150 mm. Interior partitions made of boards 50x100 mm.
-							<br /> External frame cladding: OSB 9 mm.
-							<br />
+							Insulated kit.
 						</p>
 						<h4>Roof structure:</h4>
 						<p
@@ -560,13 +541,7 @@ const TimberDetail = () => {
 								padding: "10px",
 								margin: "10px"
 							}}>
-							Rafters: board 50x150 mm, collar ties 50x150 mm.
-							<br /> Waterproof membrane STROTEX 1300 Basic.
-							<br /> Counter-crate 25x50 mm. Crate 25х100 mm.
-							<br /> Roofing components: eaves strip, wind strip. Cladding on
-							the roof crate: OSB 9 mm.
-							<br /> Roof covering: two-layer shingle tiles.
-							<br />
+							Insulated kit.
 						</p>
 						<h4>Insulation and steam-waterproofing:</h4>
 						<p
@@ -577,7 +552,31 @@ const TimberDetail = () => {
 								padding: "10px",
 								margin: "10px"
 							}}>
-							Waterproof and windproof membrane on the façade.
+							Insulated kit.
+						</p>
+						<h4>Exterior finish:</h4>
+						<p
+							style={{
+								borderBottom: "1px solid black",
+								borderRadius: "8px",
+								textAlign: "left",
+								padding: "10px",
+								margin: "10px"
+							}}>
+							Log imitation. <br /> Cladding of roof overhangs.
+							<br /> Drainage system.
+						</p>
+						<h4>Glazing:</h4>
+						<p
+							style={{
+								borderBottom: "1px solid black",
+								borderRadius: "8px",
+								textAlign: "left",
+								padding: "10px",
+								margin: "10px"
+							}}>
+							PVC windows with double glazing, PVC entrance doors (interior
+							doors are not included).
 						</p>
 						<h4>Biochemical protection:</h4>
 						<p
