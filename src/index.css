@@ -40,3 +40,14 @@ code {
   color: rgb(198, 197, 202);
   border: 1px solid rgb(198, 197, 202);
 }
+.cabin-link {
+  text-decoration: "none";
+  max-width: "1200px";
+  margin: "10px auto";
+  transition: transform 0.3s ease, boxShadow 0.3s ease;
+}
+
+.cabin-link:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}

@@ -9,6 +9,7 @@ import {
 	Typography
 } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface GroupCardProps {
 	info: string;
@@ -78,21 +79,30 @@ const GroupCard: React.FC<GroupCardProps> = ({
 						}}>
 						<Button
 							sx={{ fontSize: "8px", backgroundColor: "#1C3133" }}
-							size="small"
-							href="/log-cabins-three-four">
-							Garden log cabins 34mm
+							size="small">
+							<Link
+								to="/log-cabins-three-four"
+								style={{ textDecoration: "none", color: "#fff" }}>
+								Garden log cabins 34mm
+							</Link>
 						</Button>
 						<Button
 							sx={{ fontSize: "8px", backgroundColor: "#1C3133" }}
-							size="small"
-							href="/garden-log-cabins">
-							Garden log cabins 44mm
+							size="small">
+							<Link
+								to="/garden-log-cabins"
+								style={{ textDecoration: "none", color: "#fff" }}>
+								Garden log cabins 44mm
+							</Link>
 						</Button>
 						<Button
 							sx={{ fontSize: "8px", backgroundColor: "#1C3133" }}
-							size="small"
-							href="/residential-log-cabins">
-							Residential log cabins
+							size="small">
+							<Link
+								to="/residential-log-cabins"
+								style={{ textDecoration: "none", color: "#fff" }}>
+								Residential log cabins
+							</Link>
 						</Button>
 					</CardActions>
 				) : link !== "/duo-wall" ? (
@@ -109,9 +119,12 @@ const GroupCard: React.FC<GroupCardProps> = ({
 								backgroundColor: "#1C3133",
 								height: "30px"
 							}}
-							size="small"
-							href={link}>
-							More Info
+							size="small">
+							<Link
+								to={link}
+								style={{ textDecoration: "none", color: "#fff" }}>
+								More Info
+							</Link>
 						</Button>
 					</CardActions>
 				) : null}

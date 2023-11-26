@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import {
-	Box,
-	Card,
-	CardContent,
-	CardMedia,
-	Link,
-	Typography
-} from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import Navbar from "components/navbar.component";
 import ReactPaginate from "react-paginate";
 import { logCabinsDate } from "helpers/log-cabins.data";
@@ -26,17 +20,17 @@ const LogCabins = () => {
 		(pageNumber + 1) * cabinsPerPage
 	);
 
-  const cabinStyle = {
-    "&:hover": {
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-      transform: "scale(1.05)",
-      transition: "0.3s"
-    },
-    textDecoration: "none",
-    maxWidth: "1200px",
-  
-    margin: "10px auto"
-  };
+	const cabinStyle = {
+		"&:hover": {
+			boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+			transform: "scale(1.05)",
+			transition: "0.3s"
+		},
+		textDecoration: "none",
+		maxWidth: "1200px",
+
+		margin: "10px auto"
+	};
 
 	return (
 		<Box>
@@ -52,9 +46,10 @@ const LogCabins = () => {
 				}}>
 				{cabinsToShow.map((cabin) => (
 					<Link
+						className="cabin-link"
 						key={cabin.id}
-						href={`/logcabin/${cabin.id}`}
-						sx={cabinStyle}>
+						to={`/logcabin/${cabin.id}`}
+						style={cabinStyle}>
 						<Card>
 							<CardMedia
 								component="img"

@@ -7,7 +7,7 @@ import {
 	CardMedia,
 	Typography
 } from "@mui/material";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Navbar from "components/navbar.component";
 import ReactPaginate from "react-paginate";
 import { logCabinsDate } from "helpers/log-cabins.data";
@@ -80,6 +80,7 @@ const LogCabinsFourFour = () => {
 				}}>
 				{cabinsToShow.map((cabin) => (
 					<Link
+						className="cabin-link"
 						key={cabin.id}
 						to={`/log-cabins-three-four/${cabin.id}`}
 						style={cabinStyle}>

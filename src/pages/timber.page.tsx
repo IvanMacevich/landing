@@ -6,11 +6,11 @@ import {
 	Card,
 	CardContent,
 	CardMedia,
-	Link,
 	MenuItem,
 	Select,
 	Typography
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import Navbar from "components/navbar.component";
 import { timberData } from "helpers/timber.data";
 
@@ -117,12 +117,11 @@ const TimberPage = () => {
 							marginTop: "5px",
 							maxWidth: "1200px"
 						}}>
-							<h3 style={{ color: "black" , margin:0}}>Bedrooms</h3>
+						<h3 style={{ color: "black", margin: 0 }}>Bedrooms</h3>
 						<Select
 							value={selectedBedrooms || ""}
 							onChange={(e) => handleBedroomsChange(e.target.value)}
-							sx={{ minWidth: "120px", borderBottom:'1px solid black	' }}>
-							
+							sx={{ minWidth: "120px", borderBottom: "1px solid black	" }}>
 							<MenuItem value="">All Bedrooms</MenuItem>
 							{[1, 2, 3, 4].map((bedrooms) => (
 								<MenuItem
@@ -150,10 +149,10 @@ const TimberPage = () => {
 				}}>
 				{cabinsToShow.map((cabin) => (
 					<Link
-						sx={cabinStyle}
+						style={cabinStyle}
+						className="cabin-link"
 						key={cabin.id}
-						href={`/timber/${cabin.id}`}
-						style={{ textDecoration: "none" }}>
+						to={`/timber/${cabin.id}`}>
 						<Card>
 							<CardMedia
 								component="img"
