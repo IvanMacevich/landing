@@ -18,7 +18,7 @@ const App: React.FC = () => {
 		<div className="App">
 			<Routes>
 				<Route
-					index path="/home"
+					path="/home"
 					element={<Main />}></Route>
 				<Route
 					path="/garden-log-cabins"
