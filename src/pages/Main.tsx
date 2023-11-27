@@ -98,7 +98,7 @@ const Main: React.FC = () => {
 			</Container>
 
 			<Container sx={{ marginTop: "100px" }}>
-				<Typography variant="h3">
+				<Typography variant="h3" sx={{fontSize:'35px'}}>
 					We have several technologies for the construction of timber houses.
 				</Typography>
 				<Container
