@@ -15,7 +15,7 @@ const pagesMobile = [
     title: "Garden Log Cabins 34",
     page: "log-cabins-three-four"
   },
-  { id: 7, title: "Residential Log Cabins", page: "residential-log-cabins" },
+  { id: 7, title: "Residential Log Houses", page: "residential-log-cabins" },
   { id: 3, title: "Timber Frame Houses", page: "timber" },
   { id: 5, title: "Contact Us", page: "contact-us" }
 ];
@@ -24,12 +24,12 @@ const pages = [
   { id: 1, title: "Home", page: "home" },
   {
     id: 2,
-    title: "Log Cabins",
+    title: "Log Houses",
     page: "log-cabins",
     subpages: [
       { id: 6, title: "Garden log cabins 44mm", page: "garden-log-cabins" },
       { id: 7, title: "Garden log cabins 34mm", page: "log-cabins-three-four" },
-      { id: 8, title: "Residential Log Cabins", page: "residential-log-cabins" }
+      { id: 8, title: "Residential Log Houses", page: "residential-log-cabins" }
     ]
   },
   { id: 3, title: "Timber Frame Houses", page: "timber" },
@@ -84,10 +84,10 @@ const Navbar: React.FC = () => {
           >
             {pages.map((page: any) => (
               <React.Fragment key={page.id}>
-                {page.title === "Log Cabins" ? (
+                {page.title === "Log Houses" ? (
                   <React.Fragment>
                     <Button sx={{ my: 2, display: "block" }} onClick={handleLogCabinMenuOpen}>
-                      Log Cabins
+                      Log Houses
                     </Button>
                     <Menu
                       id="log-cabin-menu"
