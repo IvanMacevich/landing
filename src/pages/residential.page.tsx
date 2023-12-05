@@ -63,40 +63,36 @@ const LogResidential = () => {
 	return (
 		<Box>
 			<Navbar />
-			{loading ? (
-				// Display loader while images are being loaded
-				<div>Loading...</div>
-			) : (
-				<Box
-					sx={{
-						display: "grid",
-						gridTemplateColumns: { md: "1fr 1fr 1fr", sm: "1fr 1fr" },
-						gap: "20px",
-						maxWidth: "1200px",
-						margin: "0 auto",
-						padding: "20px 10px"
-					}}>
-					{cabinsToShow.map((cabin) => (
-						<Link
-							className="cabin-link"
-							key={cabin.id}
-							to={`/residential-log-cabins/${cabin.id}`}
-							style={cabinStyle}>
-							<Card>
-								<CardMedia
-									component="img"
-									alt={cabin.name}
-									height="300"
-									image={require(`../assets/Log Cabins/${cabin.img1}`)}
-								/>
-								<CardContent>
-									<Typography variant="h5">{cabin.name}</Typography>
-								</CardContent>
-							</Card>
-						</Link>
-					))}
-				</Box>
-			)}
+			<Box
+				sx={{
+					display: "grid",
+					gridTemplateColumns: { md: "1fr 1fr 1fr", sm: "1fr 1fr" },
+					gap: "20px",
+					maxWidth: "1200px",
+					margin: "0 auto",
+					padding: "20px 10px"
+				}}>
+				{cabinsToShow.map((cabin) => (
+					<Link
+						className="cabin-link"
+						key={cabin.id}
+						to={`/residential-log-cabins/${cabin.id}`}
+						style={cabinStyle}>
+						<Card>
+							<CardMedia
+								component="img"
+								alt={cabin.name}
+								height="300"
+								image={require(`../assets/Log Cabins/${cabin.img1}`)}
+							/>
+							<CardContent>
+								<Typography variant="h5">{cabin.name}</Typography>
+							</CardContent>
+						</Card>
+					</Link>
+				))}
+			</Box>
+
 			<Box
 				sx={{
 					display: "flex",
