@@ -1,27 +1,27 @@
 export const data = [
 	{
 		id: 1,
-		name: "Timber Frame",
-		folder: "Timber",
+		name: "Log Houses",
+		folder: "portfolio",
 		info: "",
-		img: "Dolores 102m2/1.jpg",
-		link:'/timber'
+		img: "Log houses/7.jpg",
+		link:'/log-resume'
 	},
 	{
 		id: 2,
-		name: "Garden Log Cabins",
-		folder: "Log Cabins",
+		name: "Timber Frame Houses",
+		folder: "portfolio",
 		info: "",
-		img: "Victoria1.png",
+		img: "Timber frame houses/7.jpg",
 		buttons: 2,
-		link:''
+		link:'/timber-resume'
 	},
 	{
 		id: 2,
-		name: "Duo Wall Log Houses",
-		folder: "Timber",
+		name: "Duo Wall Thermal Log Houses",
+		folder: "portfolio",
 		info: "",
-		img: "Alice 60m2/1.jpg",
-		link:'/duo-wall'
+		img: "Duo wall thermal log houses/7.jpg",
+		link:'/duo-wall-resume'
 	}
 ];

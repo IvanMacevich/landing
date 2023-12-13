@@ -11,7 +11,12 @@ import LogResidential from "pages/residential.page";
 import { ResCabinDetail } from "pages/residential-cabin-detail.page";
 import { LogCabinDetail } from "pages/log-cabin-detail.page";
 import LogCabinsFourFour from "pages/gardenLog44.page";
-import LogCabinFourFourDetail from "pages/log-cabin-four-four-detail.page copy";
+import LogCabinFourFourDetail from "pages/log-cabin-four-four-detail.page";
+import DuoWallPage from "pages/duo-wall.page";
+import DuoWallDetail from "pages/duo-wall-details.page";
+import DuoPort from "pages/duo-portfolio";
+import LogPort from "pages/log-portfolio";
+import TimberPort from "pages/timber";
 
 const App: React.FC = () => {
 	return (
@@ -30,6 +35,18 @@ const App: React.FC = () => {
 					path="/log-cabins-three-four"
 					element={<LogCabinsFourFour />}></Route>
 				<Route
+					path="/duo-wall"
+					element={<DuoWallPage />}></Route>
+				<Route
+					path="/duo-wall-resume"
+					element={<DuoPort />}></Route>
+				<Route
+					path="/log-resume"
+					element={<LogPort />}></Route>
+				<Route
+					path="/timber-resume"
+					element={<TimberPort />}></Route>
+				<Route
 					path="/log-cabins-three-four/:id"
 					element={<LogCabinFourFourDetail />}></Route>
 				<Route
@@ -38,6 +55,9 @@ const App: React.FC = () => {
 				<Route
 					path="/timber/:id"
 					element={<TimberDetail />}></Route>
+				<Route
+					path="/duo-wall-detail/:id"
+					element={<DuoWallDetail />}></Route>
 				<Route
 					path="/logcabin/:id"
 					element={<LogCabinDetail />}></Route>

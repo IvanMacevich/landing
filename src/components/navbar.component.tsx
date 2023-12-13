@@ -17,6 +17,7 @@ const pagesMobile = [
   },
   { id: 7, title: "Residential Log Houses", page: "residential-log-cabins" },
   { id: 3, title: "Timber Frame Houses", page: "timber" },
+  { id: 4, title: "Duo Wall Log Houses", page: "duo-wall" },
   { id: 5, title: "Contact Us", page: "contact-us" }
 ];
 
@@ -33,6 +34,7 @@ const pages = [
     ]
   },
   { id: 3, title: "Timber Frame Houses", page: "timber" },
+  { id: 4, title: "Duo Wall Log Houses", page: "duo-wall" },
   { id: 5, title: "Contact Us", page: "contact-us" }
 ];
 

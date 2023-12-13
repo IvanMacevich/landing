@@ -34,9 +34,9 @@ const Main: React.FC = () => {
 							variant="body1"
 							sx={{
 								textAlign: "center",
-								borderRight: {md:"1px solid #bfbfbf", xs:'0px'},
+								borderRight: { md: "1px solid #bfbfbf", xs: '0px' },
 								paddingRight: "10px",
-								backgroundImage: "linear-gradient(to left,  #0d0d0d, #bfbfbf)",
+								backgroundImage: "linear-gradient(to left,  #0d0d0d, #0d0d0d)",
 								color: "transparent",
 								backgroundClip: "text"
 							}}>
@@ -98,7 +98,7 @@ const Main: React.FC = () => {
 			</Container>
 
 			<Container sx={{ marginTop: "100px" }}>
-				<Typography variant="h3" sx={{fontSize:'35px'}}>
+				<Typography variant="h3" sx={{ fontSize: '35px' }}>
 					We have several technologies for the construction of timber houses.
 				</Typography>
 				<Container
@@ -113,11 +113,11 @@ const Main: React.FC = () => {
 							variant="body1"
 							sx={{
 								fontWeight: "600",
-								backgroundImage: "linear-gradient(to left,  #0d0d0d, #bfbfbf)",
+								backgroundImage: "linear-gradient(to left,  #0d0d0d, #0d0d0d)",
 								color: "transparent",
 								backgroundClip: "text",
-								borderRight: {md:"1px solid #bfbfbf", xs:'0px'},
-								paddingRight: {md:"30px", xs:'0px'},
+								borderRight: { md: "1px solid #bfbfbf", xs: '0px' },
+								paddingRight: { md: "30px", xs: '0px' },
 								marginRight: "10px"
 							}}>
 							Traditional log homes. These are constructed completely from logs
@@ -162,11 +162,11 @@ const Main: React.FC = () => {
 							variant="body1"
 							sx={{
 								fontWeight: "600",
-								backgroundImage: "linear-gradient(to left,  #0d0d0d, #bfbfbf)",
+								backgroundImage: "linear-gradient(to left,  #0d0d0d, #0d0d0d)",
 								color: "transparent",
 								backgroundClip: "text",
-								borderLeft: {md:"1px solid #bfbfbf", xs:'0px'},
-								paddingLeft: {md:"30px", xs:'0px'},
+								borderLeft: { md: "1px solid #bfbfbf", xs: '0px' },
+								paddingLeft: { md: "30px", xs: '0px' },
 								marginLeft: "10px"
 							}}>
 							Timber frame houses. This is the most popular technology in
@@ -195,11 +195,11 @@ const Main: React.FC = () => {
 							variant="body1"
 							sx={{
 								fontWeight: "600",
-								backgroundImage: "linear-gradient(to left,  #0d0d0d, #bfbfbf)",
+								backgroundImage: "linear-gradient(to left,  #0d0d0d, #0d0d0d)",
 								color: "transparent",
 								backgroundClip: "text",
-								borderRight: {md:"1px solid #bfbfbf", xs:'0px'},
-								paddingRight: {md:"30px", xs:'0px'},
+								borderRight: { md: "1px solid #bfbfbf", xs: '0px' },
+								paddingRight: { md: "30px", xs: '0px' },
 								marginRight: "10px"
 							}}>
 							Duo thermal log houses. It is a solution combining all favourable
@@ -257,6 +257,11 @@ const Main: React.FC = () => {
 					</Stack>
 				</Container>
 			</Container>
+
+			<Container sx={{ marginTop: "100px" }}>
+				<Typography variant="h3">Project Portfolio</Typography>
+			</Container>
+
 			<Container
 				component="div"
 				sx={{
