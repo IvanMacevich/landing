@@ -8,7 +8,7 @@ export const timberData = [
   { id: 7, name: 'Hanna 96m2', amount_of_images: 8, sq: '96m2', title: 'Hanna', floors: '1', terrace: 'yes', bathrooms: '1', dimensions: '12×8', bedrooms: '3', garage: 'no', style: 'modern' },
   { id: 8, name: 'Scarlet 93m2', amount_of_images: 8, sq: '93m2', title: 'Scarlet', floors: '1', terrace: 'yes', bathrooms: '1', dimensions: '12×9', bedrooms: '2', garage: 'no', style: 'modern' },
   { id: 9, name: 'Linda 86m2', amount_of_images: 8, sq: '86m2', title: 'Linda', floors: '2', terrace: 'yes', bathrooms: '2', dimensions: '7×6', bedrooms: '3', garage: 'no', style: 'barnhaus' },
-  { id: 10, name: 'Monica 85m2', amount_of_images: 9, sq: '86m2', title: 'Monica', floors: '1', terrace: 'yes', bathrooms: '1', dimensions: '11×9', bedrooms: '2', garage: 'no', style: 'classic' },
+  { id: 10, name: 'Monica 85m2', amount_of_images: 8, sq: '86m2', title: 'Monica', floors: '1', terrace: 'yes', bathrooms: '1', dimensions: '11×9', bedrooms: '2', garage: 'no', style: 'classic' },
   { id: 11, name: 'Olivia 84m2', amount_of_images: 8, sq: '84m2', title: 'Olivia', floors: '1', terrace: 'yes', bathrooms: '1', dimensions: '11×7', bedrooms: '2', garage: 'no', style: 'barnhaus' },
   { id: 12, name: 'Naomi 78m2', amount_of_images: 8, sq: '78m2', title: 'Naomi', floors: '1', terrace: 'yes', bathrooms: '2', dimensions: '9×8', bedrooms: '2', garage: 'no', style: 'classic' },
   { id: 13, name: 'Irma 72m2', amount_of_images: 8, sq: '72m2', title: 'Irma', floors: '1.5', terrace: 'yes', bathrooms: '1', dimensions: '6×6', bedrooms: '1', garage: 'no', style: 'classic' },

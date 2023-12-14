@@ -11,31 +11,15 @@ const LogResidential = () => {
 	const [pageNumber, setPageNumber] = useState(0);
 	const [loading, setLoading] = useState(true); // Loading state
 
-	const pageCount = Math.ceil(residential.length / cabinsPerPage);
-
-	const changePage = ({ selected }: any) => {
-		setPageNumber(selected);
-	};
-
-	const cabinsToShow = residential.slice(
-		pageNumber * cabinsPerPage,
-		(pageNumber + 1) * cabinsPerPage
-	);
-
-	const cabinStyle = {
-		"&:hover": {
-			boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-			transform: "scale(1.05)",
-			transition: "0.3s"
-		},
-		textDecoration: "none",
-		maxWidth: "1200px",
-		margin: "10px auto"
-	};
-
-	// useEffect to preload images
 	useEffect(() => {
-		const loadImage = (src: any) => {
+		// Load the saved page number from localStorage on component mount
+		const savedPageNumber = localStorage.getItem("logResidentialPageNumber");
+		if (savedPageNumber !== null) {
+			setPageNumber(parseInt(savedPageNumber, 10));
+		}
+
+		// Preload images
+		const loadImage = (src:any) => {
 			return new Promise((resolve, reject) => {
 				const img = new Image();
 				img.src = src;
@@ -59,6 +43,29 @@ const LogResidential = () => {
 
 		preloadImages();
 	}, []); // Empty dependency array to run the effect only once on component mount
+
+	const pageCount = Math.ceil(residential.length / cabinsPerPage);
+
+	const changePage = ({ selected }:any) => {
+		setPageNumber(selected);
+		localStorage.setItem("logResidentialPageNumber", selected.toString());
+	};
+
+	const cabinsToShow = residential.slice(
+		pageNumber * cabinsPerPage,
+		(pageNumber + 1) * cabinsPerPage
+	);
+
+	const cabinStyle = {
+		"&:hover": {
+			boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+			transform: "scale(1.05)",
+			transition: "0.3s",
+		},
+		textDecoration: "none",
+		maxWidth: "1200px",
+		margin: "10px auto",
+	};
 
 	return (
 		<Box>
@@ -110,6 +117,7 @@ const LogResidential = () => {
 					nextLinkClassName={"pagination__link"}
 					disabledClassName={"pagination__link--disabled"}
 					activeClassName={"pagination__link--active"}
+					forcePage={pageNumber}
 				/>
 			</Box>
 		</Box>

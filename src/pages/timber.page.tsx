@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import {
 	Box,
@@ -31,6 +31,7 @@ const TimberPage = () => {
 	const [sortBy, setSortBy] = useState("asc");
 	const [selectedBedrooms, setSelectedBedrooms] = useState(null);
 
+
 	const pageCount = Math.ceil(
 		(selectedBedrooms
 			? timberData.filter((cabin) => cabin.bedrooms === selectedBedrooms).length
@@ -38,6 +39,10 @@ const TimberPage = () => {
 	);
 
 	const changePage = ({ selected }: any) => {
+		localStorage.setItem(
+			"timberPageState",
+			JSON.stringify({ pageNumber: selected, sortBy, selectedBedrooms })
+		);
 		setPageNumber(selected);
 	};
 
@@ -81,6 +86,16 @@ const TimberPage = () => {
 		setSelectedBedrooms(bedrooms);
 		setPageNumber(0); // Reset page number when changing the filter
 	};
+
+	useEffect(() => {
+		const savedState = localStorage.getItem("timberPageState");
+		if (savedState) {
+			const { pageNumber, sortBy, selectedBedrooms } = JSON.parse(savedState);
+			setPageNumber(pageNumber);
+			setSortBy(sortBy);
+			setSelectedBedrooms(selectedBedrooms);
+		}
+	}, []);
 
 	return (
 		<Box>
@@ -180,6 +195,7 @@ const TimberPage = () => {
 					nextLinkClassName={"pagination__link"}
 					disabledClassName={"pagination__link--disabled"}
 					activeClassName={"pagination__link--active"}
+					forcePage={pageNumber}
 				/>
 			</Box>
 		</Box>

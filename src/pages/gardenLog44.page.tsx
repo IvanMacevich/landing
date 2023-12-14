@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
 	Box,
 	Button,
@@ -14,13 +14,21 @@ import { logCabinsDate } from "helpers/log-cabins.data";
 import { logCabinFourFourData } from "helpers/logFourFourData";
 
 const LogCabinsFourFour = () => {
-	const cabinsPerPage = 6; // Adjust the number of cabins per page as needed
+	const cabinsPerPage = 6;
 	const [pageNumber, setPageNumber] = useState(0);
+
+	useEffect(() => {
+		const savedPageNumber = localStorage.getItem("logCabinsFourFourPageNumber");
+		if (savedPageNumber !== null) {
+			setPageNumber(parseInt(savedPageNumber, 10));
+		}
+	}, []);
 
 	const pageCount = Math.ceil(logCabinFourFourData.length / cabinsPerPage);
 
 	const changePage = ({ selected }: any) => {
 		setPageNumber(selected);
+		localStorage.setItem("logCabinsFourFourPageNumber", selected.toString());
 	};
 
 	const cabinsToShow = logCabinFourFourData.slice(
@@ -32,18 +40,18 @@ const LogCabinsFourFour = () => {
 		"&:hover": {
 			boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 			transform: "scale(1.05)",
-			transition: "0.3s"
+			transition: "0.3s",
 		},
 		textDecoration: "none",
 		maxWidth: "1200px",
-
-		margin: "10px auto"
+		margin: "10px auto",
 	};
+
 	const onButtonClick = () => {
 		const pdfUrl = require("../assets/Catalogue 34mm PDF.pdf");
 		const link = document.createElement("a");
 		link.href = pdfUrl;
-		link.download = "Catalogue 34mm PDF.pdf"; // specify the filename
+		link.download = "Catalogue 34mm PDF.pdf";
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
@@ -115,6 +123,7 @@ const LogCabinsFourFour = () => {
 					nextLinkClassName={"pagination__link"}
 					disabledClassName={"pagination__link--disabled"}
 					activeClassName={"pagination__link--active"}
+					forcePage={pageNumber}
 				/>
 			</Box>
 		</Box>

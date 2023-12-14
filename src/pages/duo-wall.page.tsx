@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import {
 	Box,
@@ -31,35 +31,45 @@ const DuoWallPage = () => {
 	const cabinsPerPage = 6;
 	const [pageNumber, setPageNumber] = useState(0);
 	const [sortBy, setSortBy] = useState("asc");
-
+  
+	useEffect(() => {
+	  // Load the saved page number from localStorage on component mount
+	  const savedPageNumber = localStorage.getItem("duoWallPageNumber");
+	  if (savedPageNumber !== null) {
+		setPageNumber(parseInt(savedPageNumber));
+	  }
+	}, []);
+  
 	const pageCount = Math.ceil(duoWallData.length / cabinsPerPage);
-
+  
 	const changePage = ({ selected }: any) => {
-		setPageNumber(selected);
+	  setPageNumber(selected);
+	  // Save the current page number to localStorage
+	  localStorage.setItem("duoWallPageNumber", selected.toString());
 	};
-
-	const sortCabins = (cabins:any, sortBy:any) => {
-		return [...cabins].sort((a, b) => {
-			const sqA = parseInt(a.sq);
-			const sqB = parseInt(b.sq);
-
-			if (sortBy === "asc") {
-				return sqA - sqB;
-			} else {
-				return sqB - sqA;
-			}
-		});
+  
+	const sortCabins = (cabins: any, sortBy: any) => {
+	  return [...cabins].sort((a, b) => {
+		const sqA = parseInt(a.sq);
+		const sqB = parseInt(b.sq);
+  
+		if (sortBy === "asc") {
+		  return sqA - sqB;
+		} else {
+		  return sqB - sqA;
+		}
+	  });
 	};
-
+  
 	const sortedCabins = sortCabins(duoWallData, sortBy);
-
+  
 	const cabinsToShow = sortedCabins.slice(
-		pageNumber * cabinsPerPage,
-		(pageNumber + 1) * cabinsPerPage
+	  pageNumber * cabinsPerPage,
+	  (pageNumber + 1) * cabinsPerPage
 	);
-
+  
 	const handleSort = () => {
-		setSortBy((prevSortBy) => (prevSortBy === "asc" ? "desc" : "asc"));
+	  setSortBy((prevSortBy) => (prevSortBy === "asc" ? "desc" : "asc"));
 	};
 
 	return (
@@ -132,6 +142,7 @@ const DuoWallPage = () => {
 					nextLinkClassName={"pagination__link"}
 					disabledClassName={"pagination__link--disabled"}
 					activeClassName={"pagination__link--active"}
+					forcePage={pageNumber}
 				/>
 			</Box>
 		</Box>
