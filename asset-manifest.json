@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "//www.bdl-house.com/static/css/main.dbd08ea8.css",
-    "main.js": "//www.bdl-house.com/static/js/main.6afb305f.js",
+    "main.js": "//www.bdl-house.com/static/js/main.2a568470.js",
     "static/media/Video.mp4": "//www.bdl-house.com/static/media/Video.4ba27813130f3a9dd08f.mp4",
     "static/media/3.jpg": "//www.bdl-house.com/static/media/3.47b9872f1f43e335c2ad.jpg",
     "static/media/1.jpg": "//www.bdl-house.com/static/media/1.f493c36855533af75353.jpg",
@@ -19,7 +19,7 @@
     "static/media/1.PNG": "//www.bdl-house.com/static/media/1.63c7a22108438de1ec25.PNG",
     "static/media/4.PNG": "//www.bdl-house.com/static/media/4.ca17a6a0e01263bf491c.PNG",
     "static/media/2.PNG": "//www.bdl-house.com/static/media/2.0b6015f8c76f696661ef.PNG",
-    "static/media/scheme.JPG": "//www.bdl-house.com/static/media/scheme.9155bd971e828cf63def.JPG",
+    "static/media/scheme.JPG": "//www.bdl-house.com/static/media/scheme.1ff264f8c416fdc1cfa6.JPG",
     "static/media/10.jpg": "//www.bdl-house.com/static/media/10.6a45ae4cd07072ffd439.jpg",
     "static/media/Kilenny1.png": "//www.bdl-house.com/static/media/Kilenny1.c20a2febc8587053d690.png",
     "static/media/Hanna1.png": "//www.bdl-house.com/static/media/Hanna1.8f12524277bd2ce0dd19.png",
@@ -109,8 +109,6 @@
     "static/media/17.jpg": "//www.bdl-house.com/static/media/17.dbb23bc07e2371a0d06a.jpg",
     "static/media/Matilda2.png": "//www.bdl-house.com/static/media/Matilda2.bc18643749db6442b11e.png",
     "static/media/scheme2.JPG": "//www.bdl-house.com/static/media/scheme2.8c901d4c9bab78b84fc2.JPG",
-    "static/media/IMG_0159.JPG": "//www.bdl-house.com/static/media/IMG_0159.032594b7e8a964196c48.JPG",
-    "static/media/scheme.jpg": "//www.bdl-house.com/static/media/scheme.1ff264f8c416fdc1cfa6.jpg",
     "static/media/Kilenny3.png": "//www.bdl-house.com/static/media/Kilenny3.ac4834f758c721357bbd.png",
     "static/media/TwoBedE3.png": "//www.bdl-house.com/static/media/TwoBedE3.46b343a8065d4f95a56a.png",
     "static/media/OneBedC3.png": "//www.bdl-house.com/static/media/OneBedC3.0e2a790fcfdb1a0c0bb1.png",
@@ -156,10 +154,10 @@
     "static/media/bathroom.png": "//www.bdl-house.com/static/media/bathroom.73a1424f4e56407b3b90.png",
     "index.html": "//www.bdl-house.com/index.html",
     "main.dbd08ea8.css.map": "//www.bdl-house.com/static/css/main.dbd08ea8.css.map",
-    "main.6afb305f.js.map": "//www.bdl-house.com/static/js/main.6afb305f.js.map"
+    "main.2a568470.js.map": "//www.bdl-house.com/static/js/main.2a568470.js.map"
   },
   "entrypoints": [
     "static/css/main.dbd08ea8.css",
-    "static/js/main.6afb305f.js"
+    "static/js/main.2a568470.js"
   ]
 }
