@@ -10,14 +10,16 @@ export const FullScreenPhoto = ({ name, open, onClose, image }: any) => {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          maxWidth: "800px",
+          maxWidth: "1000px",
           width: "90%", // Adjusted width for responsiveness
           maxHeight: "900px",
           height: "90%", // Adjusted height for responsiveness
         }}
       >
-        <img
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        <Box
+          component='img'
+          width="100%"
+          height="100%"
           src={require(`../assets/${name}/${image}`)} 
           alt="FullScreenPhoto"
         />

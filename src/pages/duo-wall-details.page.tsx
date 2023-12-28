@@ -137,7 +137,7 @@ const DuoWallDetail = () => {
                         sx={{cursor: 'pointer'}}
                         src={require(`../assets/Duo wall log houses/${cabin.name}/scheme.JPG`)}
                         alt={cabin.name}
-                        width="100%"
+                        width="70%"
                         height="auto"
                         onClick={() => handlePhotoClick(`${cabin.name}/scheme.JPG`)}
                     />
@@ -149,7 +149,7 @@ const DuoWallDetail = () => {
                             component="img"
                             src={require(`../assets/Duo wall log houses/${cabin.name}/scheme2.JPG`)}
                             alt={cabin.name}
-                            width="100%"
+                            width="70%"
                             height="auto"
                             onClick={() => handlePhotoClick(`${cabin.name}/scheme2.JPG`)}
                         />
