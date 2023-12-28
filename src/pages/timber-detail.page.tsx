@@ -1,6 +1,7 @@
 import { Typography, Button, Modal } from "@mui/material";
 import { Box, display, textAlign } from "@mui/system";
 import Footer from "components/footer.component";
+import { FullScreenPhoto } from "components/full-screen-photo";
 import { FullScreenSlider } from "components/full-screen-slider";
 import Navbar from "components/navbar.component";
 import { timberData } from "helpers/timber.data";
@@ -15,6 +16,17 @@ const TimberDetail = () => {
 	const cabinName = cabin ? cabin.name : null;
 	const [mainPhotoIndex, setMainPhotoIndex] = useState(0);
 	const [isFullScreenOpen, setFullScreenOpen] = useState(false);
+	const [photoModalOpen, setPhotoModalOpen] = useState(false);
+	const [selectedPhoto, setSelectedPhoto] = useState(null);
+	const handlePhotoClick = (photo: any) => {
+		setSelectedPhoto(photo);
+		setPhotoModalOpen(true);
+	};
+
+	const handleClosePhotoModal = () => {
+		setPhotoModalOpen(false);
+		setSelectedPhoto(null);
+	};
 	let clickedInd = 1;
 
 	if (!cabin) {
@@ -218,32 +230,37 @@ const TimberDetail = () => {
 						maxWidth: "1200px",
 						marginBottom: "60px",
 						"@media (min-width: 600px)": {
-							gridTemplateColumns: "1fr 1fr"
-						}
-					}}>
+							gridTemplateColumns: "1fr 1fr",
+						},
+					}}
+				>
 					<Box>
-						<Box
-							component="img"
-							src={require(`../assets/Timber/${cabin.name}/${
-								cabin.amount_of_images + 1
-							}.jpg`)}
+						<img
+							style={{ width: "100%", height: "auto", cursor: "pointer"}}
+							src={require(`../assets/Timber/${cabin.name}/${cabin.amount_of_images + 1}.jpg`)}
 							alt={cabin.name}
-							width="100%"
-							height="auto"
+							onClick={() => handlePhotoClick(`${cabin.name}/${cabin.amount_of_images + 1}.jpg`)}
 						/>
 					</Box>
 					{(parseFloat(cabin.floors) >= 1.5 || cabin.floors === "1+attic") && (
 						<Box>
-							<Box
-								component="img"
-								src={require(`../assets/Timber/${cabin.name}/${
-									cabin.amount_of_images + 2
-								}.jpg`)}
+							<img
+								style={{ width: "100%", height: "auto" }}
+								src={require(`../assets/Timber/${cabin.name}/${cabin.amount_of_images + 2}.jpg`)}
 								alt={cabin.name}
-								width="100%"
-								height="auto"
+								onClick={() => handlePhotoClick(`${cabin.name}/${cabin.amount_of_images + 2}.jpg`)}
 							/>
 						</Box>
+					)}
+
+					{/* Render the modal */}
+					{selectedPhoto && (
+						<FullScreenPhoto
+							open={photoModalOpen}
+							onClose={handleClosePhotoModal}
+							image={selectedPhoto}
+							name="Timber"
+						/>
 					)}
 				</Box>
 
@@ -490,11 +507,11 @@ const TimberDetail = () => {
 								padding: "10px",
 								margin: "10px"
 							}}>
-							Floor insulation 150 mm.<br/> Insulation of external walls 150 mm.<br/>
-							Soundproofing of interior partitions 100 mm.<br/> Roof insulation 150
-							mm, pitched roof.<br/> Vapor barrier film for external walls.<br/>
-							Waterproof and windproof film for interior partitions.<br/> Vapor
-							barrier film for the attic floor.<br/> Vapor barrier film for rafters.<br/>
+							Floor insulation 150 mm.<br /> Insulation of external walls 150 mm.<br />
+							Soundproofing of interior partitions 100 mm.<br /> Roof insulation 150
+							mm, pitched roof.<br /> Vapor barrier film for external walls.<br />
+							Waterproof and windproof film for interior partitions.<br /> Vapor
+							barrier film for the attic floor.<br /> Vapor barrier film for rafters.<br />
 							Waterproof and windproof membrane on the façade.
 						</p>
 						<h4>Biochemical protection:</h4>
