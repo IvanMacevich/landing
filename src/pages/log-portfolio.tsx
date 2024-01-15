@@ -29,7 +29,7 @@ const LogPort = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h1>Dou wall log houses resume</h1>
+            <h1>Log houses</h1>
             <Box
                 sx={{
                     display: "flex",

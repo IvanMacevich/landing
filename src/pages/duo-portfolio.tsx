@@ -29,7 +29,7 @@ const DuoPort = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h1>Dou wall log houses resume</h1>
+            <h1>Dou wall log houses</h1>
             <Box
                 sx={{
                     display: "flex",
