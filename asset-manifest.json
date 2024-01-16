@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "//www.bdl-house.com/static/css/main.dbd08ea8.css",
-    "main.js": "//www.bdl-house.com/static/js/main.3112dbad.js",
+    "main.js": "//www.bdl-house.com/static/js/main.a1fac898.js",
     "static/media/Video.mp4": "//www.bdl-house.com/static/media/Video.4ba27813130f3a9dd08f.mp4",
     "static/media/3.jpg": "//www.bdl-house.com/static/media/3.47b9872f1f43e335c2ad.jpg",
     "static/media/1.jpg": "//www.bdl-house.com/static/media/1.f493c36855533af75353.jpg",
@@ -154,10 +154,10 @@
     "static/media/bathroom.png": "//www.bdl-house.com/static/media/bathroom.73a1424f4e56407b3b90.png",
     "index.html": "//www.bdl-house.com/index.html",
     "main.dbd08ea8.css.map": "//www.bdl-house.com/static/css/main.dbd08ea8.css.map",
-    "main.3112dbad.js.map": "//www.bdl-house.com/static/js/main.3112dbad.js.map"
+    "main.a1fac898.js.map": "//www.bdl-house.com/static/js/main.a1fac898.js.map"
   },
   "entrypoints": [
     "static/css/main.dbd08ea8.css",
-    "static/js/main.3112dbad.js"
+    "static/js/main.a1fac898.js"
   ]
 }
